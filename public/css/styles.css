@@ -1,0 +1,29 @@
+body {
+    font-family: 'Tajawal', sans-serif;
+}
+body * {
+    margin: 0;
+    padding: 0;
+}
+.user {
+    margin-bottom: 10px;
+}
+.user .linkContainer {
+    border: 1px solid grey;
+    border-radius: 5px;
+    padding: 5px;
+    margin: 5px 0;
+    width: 50%;
+}
+.userName {
+    font-family: 'Josefin Sans', sans-serif;
+}
+.linkTitle {
+
+}
+.url {
+
+}
+.description {
+
+}

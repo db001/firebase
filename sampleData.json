@@ -1,0 +1,57 @@
+{
+    "users": {
+        "0": {
+            "username": "Bob",
+            "email": "bob@bobtest.com",
+            "links": {
+                "l01": {
+                    "linkName": "Facebook",
+                    "linkUrl": "https://www.facebook.com",
+                    "linkDesc": "Facebook homepage"
+                }
+            }
+        },
+        "1": {
+            "username": "Mikey",
+            "email": "monkeyMan@hairy.com",
+            "links": {
+                "l11": {
+                    "linkName": "Freecodecamp",
+                    "linkUrl": "https://www.freecodecamp.org",
+                    "linkDesc": "Learn to code"
+                },
+                "l12": {
+                    "linkName": "BBC",
+                    "linkUrl": "https://www.bbc.co.uk",
+                    "linkDesc": "BBC website homepage"
+                }
+            }
+        },
+        "2": {
+            "username": "julio",
+            "email": "jman@ohyeah.com",
+            "links": {
+                "l21": {
+                    "linkName": "github",
+                    "linkUrl": "https://www.github.com",
+                    "linkDesc": "Version control"
+                },
+                "l22": {
+                    "linkName": "Slack",
+                    "linkUrl": "https://slack.com",
+                    "linkDesc": "Chat service"
+                },
+                "l23": {
+                    "linkName": "Hackerrank",
+                    "linkUrl": "https://www.hackerrank.com",
+                    "linkDesc": "Coding challenges"
+                }
+            }
+        },
+        "3": {
+            "username": "Mikey",
+            "email": "monkeyMan@hairy.com",
+            "links": {}
+        }
+    }
+}
