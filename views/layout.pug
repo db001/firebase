@@ -6,8 +6,14 @@ html
     link(rel="stylesheet", href="/css/styles.css", type="text/css")
     link(href="https://fonts.googleapis.com/css?family=Josefin+Sans|Tajawal" rel="stylesheet")
   body
+
+    block header
+      .nav
+        a(href="http://localhost:3000/") Home
+        a(href="http://localhost:3000/users") Users
       
-    block content
+    .content
+      block content
   
     block scripts
       //- script(src="/js/scripts.js")

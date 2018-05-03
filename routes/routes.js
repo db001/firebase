@@ -11,18 +11,38 @@ admin.initializeApp({
 });
 
 const db = admin.database();
-const ref = db.ref("/");
 
 router.get('/', (req, res) => {
+    res.render('index', {
+        title: 'Home'
+    });
+});
+
+router.get('/users', (req, res) => {
+    const ref = db.ref("/");
     ref.once("value", function (snapshot) {
         const users = snapshot.val();
-        console.log(users);
-        res.render('index', {
-            title: 'Home',
+
+        res.render('users', {
+            title: 'User index',
             ...users
         });
     }, function (errorObject) {
         console.log(`The read failed: ${errorObject.code}`);
+    });
+});
+
+router.get('/user/:username', (req, res) => {
+    const userId = req.params.username;
+    const userRef = db.ref("/users");
+    userRef.once("value", snapshot => {
+        const users = snapshot.val();
+        Object.keys(users).map(ele => {
+            if (users[ele].username === userId) {
+                console.log('Match');
+                res.send(users[ele]);
+            }
+        });
     });
 });
 

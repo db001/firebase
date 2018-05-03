@@ -1,9 +1,29 @@
 body {
     font-family: 'Tajawal', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 body * {
     margin: 0;
     padding: 0;
+}
+h2 {
+    font-family: 'Josefin Sans', sans-serif;    
+}
+.content {
+    margin-left: 10px;
+}
+.nav {
+    width: 100%;
+    height: 50px;
+    background-color: rgb(200, 200, 200);
+    margin: 0 0 10px 0;
+}
+.nav a {
+    font-family: 'Josefin Sans', sans-serif;    
+    text-transform: uppercase;    
+    margin: 10px;
+    line-height: 50px;
 }
 .user {
     margin-bottom: 10px;
@@ -18,7 +38,7 @@ body * {
 .userName {
     font-family: 'Josefin Sans', sans-serif;
 }
-.linkTitle {
+/* .linkTitle {
 
 }
 .url {
@@ -26,4 +46,4 @@ body * {
 }
 .description {
 
-}
+} */

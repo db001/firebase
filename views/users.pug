@@ -1,0 +1,16 @@
+extends layout
+
+block content
+
+  each user in users
+    .user
+      h3.userName #{user.username}   
+      if user.links
+        ul
+          each item in user.links
+            li.linkContainer
+              h4.linkTitle #{item.linkName}
+              a.url(href=`${item.linkUrl}` target="_blank" referrer="noreferrer") #{item.linkUrl}
+              p.description #{item.linkDesc}
+      else
+        p.linkContainer This user hasn't shared any links yet
