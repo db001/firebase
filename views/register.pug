@@ -1,0 +1,22 @@
+extend layout
+
+block content
+    form(action="/register", method="post")
+        .registerForm
+            .registerInput
+                label(for="name") Name:
+                input(type="text", name="name")
+            .registerInput                
+                label(for="username") User name:
+                input(type="text" name="username")
+            .registerInput                
+                label(for="email") Email:
+                input(type="email" name="email")
+            .registerInput                
+                label(for="password") Password:
+                input(type="password" name="password")
+            .registerInput                
+                label(for="passwordConfirm") Confirm password:
+                input(type="password" name="confirmPassword")
+            .registerInput        
+                button(type="submit") Submit

@@ -1,9 +1,11 @@
 const express = require('express');
 const router = express.Router();
+const bcrypt = require('bcrypt');
 
 // Firebase setup
 const admin = require('firebase-admin');
 const serviceAccount = require('../serviceAccount.json');
+const firebase = require('firebase');
 
 admin.initializeApp({
     credential: admin.credential.cert(serviceAccount),
@@ -44,6 +46,25 @@ router.get('/user/:username', (req, res) => {
             }
         });
     });
+});
+
+router.get('/register', (req, res) => {
+    res.render('register');
+});
+
+router.post('/register', async (req, res) => {
+    console.log(req.body);
+    const name = req.body.name;
+    const email = req.body.email;
+    bcrypt.genSalt(10, (err, salt) => {
+        bcrypt.hash(req.body.password, salt, (err, hash) => {
+            admin.auth().createUserWithEmailAndPassword(email, hash)
+                .catch(error => {
+                    console.log(error.code, error.message);
+                })
+        })
+    });
+    res.redirect('/');
 });
 
 module.exports = router;

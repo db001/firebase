@@ -38,12 +38,16 @@ h2 {
 .userName {
     font-family: 'Josefin Sans', sans-serif;
 }
-/* .linkTitle {
-
+.registerForm {
+    display: flex;
+    flex-direction: column;
 }
-.url {
-
+.registerForm .registerInput {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
 }
-.description {
-
-} */
+.registerForm button {
+    width: 150px;
+}
